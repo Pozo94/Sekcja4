@@ -1,0 +1,287 @@
+/// Main Styles File
+/// Here we import all the global Styles files we need for our project.
+
+@import "styles/normalize.scss";
+@import "styles/root.scss";
+@import "styles/fonts.scss";
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--color-primary);
+  background: #0F162D;
+}
+h1 {
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: -0.2%;
+  font-weight: bold;
+
+}
+h2 {
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0;
+  font-weight: bold;
+}
+
+.p_one {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+  font-weight: normal;
+}
+
+.p_two {
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0;
+  font-weight: normal;
+  margin: 0 20px 20px 20px;
+}
+.container-card{
+
+}
+.card{
+  display: block;
+  text-align: center;
+  img{
+    width: 32px;
+    height: 32px;
+  }
+  & &_rob{
+    background: rgba(255,246,41,0.1);
+    display: flex;
+    width: 64px;
+    height: 64px;
+    align-items: center;
+    justify-content: center;
+  }
+  & &_ml{
+    display: flex;
+    background: rgba(202,89,255,0.1);
+    width: 64px;
+    height: 64px;
+    align-items: center;
+    justify-content: center;
+
+  }
+  & &_cv{
+    color: var(--color-on-vr);
+    display: flex;
+    background: rgba(108,124,255,0.1);
+    width: 64px;
+    height: 64px;
+    align-items: center;
+    justify-content: center;
+  }
+  & &_nl{
+    display: flex;
+    background: rgba(42,255,255,0.1);
+    width: 64px;
+    height: 64px;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+}
+
+@media screen and (min-width: 835px) {
+
+  .p_two {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0;
+    font-weight: normal;
+  }
+  .container-card{
+    display: grid;
+    position: absolute;
+    width: 540px;
+    height: 521px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "top-left";
+    gap: 24px 31px;
+    left: 728px;
+    top: 159px;
+
+    padding-right: 152px ;
+    z-index: 2;
+  }
+
+  .container-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+
+    position: absolute;
+    width: 467px;
+    height: 232px;
+    margin-left: 152px;
+    margin-top: 159px;
+  }
+  .card {
+    position: relative;
+    background: #272D42;
+    border-radius: 24px;
+    width: 268px;
+    height: 240px;
+
+    & &_ml {
+      text-align: center;
+      margin-top: 24px ;
+      margin-left:auto ;
+      margin-right: auto;
+      border-radius: 24px;
+
+    }
+
+    & &_rob {
+      text-align: center;
+      margin-top: 24px ;
+      margin-left:auto ;
+      margin-right: auto;
+      border-radius: 24px;
+
+    }
+
+    & &_nl {
+      text-align: center;
+      margin-top: 24px ;
+      margin-left:auto ;
+      margin-right: auto;
+      border-radius: 24px;
+
+    }
+
+    & &_cv {
+      text-align: center;
+      margin-top: 24px ;
+      margin-left:auto ;
+      margin-right: auto;
+      border-radius: 24px;
+
+    }
+  }
+}
+
+@media screen and (max-width: 834px) and (min-width: 481px) {
+  #home-page{
+    display: block;
+    padding: 0 140px;
+  }
+
+  .container-card{
+    display: grid;
+    position: relative;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+
+    margin-bottom: 247px;
+
+
+    }
+
+  .container-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 247px;
+    position: relative;
+    width: 496px;
+    margin-right: auto;
+    margin-left: auto;
+
+
+
+  }
+  .card {
+    position: relative;
+    background: #272D42;
+    border-radius: 24px;
+    width: 240px;
+    height: 218px;
+
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.2%;
+    font-weight: bold;
+
+  }
+  #home-page{
+    display: block;
+  }
+  .container-card{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding-bottom: 64px;
+    margin-right: 16px;
+    margin-left: 16px;
+
+
+  }
+  .container-title {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 48px 0 16px 16px;
+    position: relative;
+    width: 343px;
+    height: 216px;
+    justify-content: center;
+
+
+  }
+  .card{
+    width: 343px;
+    height: 196px;
+    background: #272D42;
+    border-radius: 16px;
+    gap: 16px;
+    text-align: center;
+    & &_ml {
+      text-align: center;
+      margin:20px auto auto;
+      border-radius: 16px;
+
+
+    }
+
+    & &_rob {
+      text-align: center;
+      margin:20px auto auto;
+      border-radius: 16px;
+
+    }
+
+    & &_nl {
+      text-align: center;
+      margin:20px auto auto;
+      border-radius: 16px;
+
+    }
+
+    & &_cv {
+      text-align: center;
+      margin:20px auto auto;
+      border-radius: 16px;
+
+    }
+  }
+}
+
+p {
+  color: #FFFFFF;
+}
